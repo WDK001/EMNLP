@@ -1,6 +1,7 @@
 ## Response to Review #3:
 
 **Question:** The method seems sensitive to the hyperparameters such as the number of iterations and the percentage of filters kept. Did you find that performance changed significantly between different datasets?
+
 **Answer:** The iterations and percentage of filters kept do not differ much for different datasets used in the experiment. Generally, the best number of iterations is 2 or 3. The selection of filters is based on a sequential search algorithm and validation loss. If the difference between the maximum validation loss and minimum validation loss in 5 consecutive selection steps is smaller than a preset value (0.01 is used in the experiment), we will stop the filter selection procedure. We observed the percentage of filters kept ranges from 0.85 to 0.9. The experiment results show that our proposed model could remove task-irrelevant words efficiently and is effective on all datasets, but the improvements are related to the dataset noise and sample number per class. Our proposed model could achieve more significant improvement on noisier datasets, such as Yelp Full Review dataset. The noise here means words irrelevant to the specific task, usually, long texts contain more irrelevant words to the specific classification task.
  
 
