@@ -4,7 +4,8 @@
 
 **Answer:** The iterations and percentage of filters kept do not differ much for different datasets used in the experiment. Generally, the best number of iterations is 2 or 3. The selection of filters is based on a sequential search algorithm and validation loss. If the difference between the maximum validation loss and minimum validation loss in 5 consecutive selection steps is smaller than a preset value (0.01 is used in the experiment), we will stop the filter selection procedure. We observed the percentage of filters kept ranges from 0.85 to 0.9. The experiment results show that our proposed model could remove task-irrelevant words efficiently and is effective on all datasets, but the improvements are related to the dataset noise and sample number per class. Our proposed model could achieve more significant improvement on noisier datasets, such as Yelp Full Review dataset. The noise here means words irrelevant to the specific task, usually, long texts contain more irrelevant words to the specific classification task.
  
-##In addition, the improvement achieved by our proposed model is more significant for datasets having fewer samples per class, such as Yahoo dataset. This is because the network is easier to capture (fit to) the noise if the sample size per class is smaller. We will discuss this with more details in the final submission.
+
+In addition, the improvement achieved by our proposed model is more significant for datasets having fewer samples per class, such as Yahoo dataset. This is because the network is easier to capture (fit to) the noise if the sample size per class is smaller. We will discuss this with more details in the final submission.
 
 **Question:** Table 2: Did you train the baseline methods yourself or did you use the accuracies reported by the original papers?
 
